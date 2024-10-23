@@ -1,0 +1,61 @@
+/* Style untuk judul */
+.title {
+    text-align: center;
+    color: #4CAF50;
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+}
+
+/* Style untuk tabel */
+.styled-table {
+    width: 80%;
+    margin: 25px auto;
+    border-collapse: collapse;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table thead tr {
+    background-color: #4CAF50;
+    color: white;
+    text-align: left;
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #4CAF50;
+}
+
+/* Style untuk tombol */
+.green-button {
+    display: block;
+    width: 100px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.green-button:hover {
+    background-color: #45a049;
+}

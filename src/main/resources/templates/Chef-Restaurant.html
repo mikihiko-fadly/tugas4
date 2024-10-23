@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef and Food Pairing</title>
+
+    <style>
+        
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            font-family: Arial, sans-serif;
+            margin-top: 20px;
+        }
+
+        
+        ul {
+            width: 50%;
+            margin: 25px auto;
+            list-style-type: none;
+            padding: 0;
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+        }
+
+        ul li {
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        ul li:nth-child(even) {
+            background-color: #e3f2e1;
+        }
+
+       
+        a {
+            margin: 20px;
+            display: inline-block;
+            text-decoration: none;
+            color: #4CAF50;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+        }
+
+        a:hover {
+            color: #45a049;
+            text-decoration: underline;
+        }
+
+     
+        .nav-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chef and Food Pairing</h1>
+
+    <ul>
+        <li th:each="cr : ${chefRestaurants}">
+            <span th:text="${cr.food.name}"></span> prepared by 
+            <span th:text="${cr.chef.name}"></span>
+        </li>
+    </ul>
+
+    <div class="nav-links">
+        <a href="/list-food">List Food</a> |
+        <a href="/list-chef">List Chef</a>
+    </div>
+</body>
+</html>

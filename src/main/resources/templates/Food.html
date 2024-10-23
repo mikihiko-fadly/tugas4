@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Food</title>
+
+    <style>
+        
+        .title {
+            text-align: center;
+            color: #4CAF50;
+            font-family: Arial, sans-serif;
+            margin-top: 20px;
+        }
+
+       
+        .styled-table {
+            width: 80%;
+            margin: 25px auto;
+            border-collapse: collapse;
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+            text-align: left;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .styled-table thead tr {
+            background-color: #4CAF50;
+            color: white;
+            text-align: left;
+        }
+
+        .styled-table th, .styled-table td {
+            padding: 12px 15px;
+        }
+
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #4CAF50;
+        }
+
+        
+        .green-button {
+            display: block;
+            width: 100px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .green-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">List Food</h1>
+
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>PRICE</th>
+                <th>SIZE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="food : ${foods}">
+                <td th:text="${food.id}"></td>
+                <td th:text="${food.name}"></td>
+                <td th:text="${food.price}"></td>
+                <td th:text="${food.size}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button class="green-button" onclick="window.location.href='/list-chef'">List Chef</button>
+</body>
+</html>
